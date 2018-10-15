@@ -80,7 +80,9 @@ function solvePuzzle(origin, end, path) {
       solution += "r";
       col_deviation++;
     } else {
-      console.log("WTF");
+      // If already at (0,0), we need to do a +1 move, then a -1 move.
+      solution += "u";
+      row_deviation++;
     }
   }
   
