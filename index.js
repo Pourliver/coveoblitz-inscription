@@ -68,10 +68,10 @@ function solvePuzzle(origin, end, path) {
     }
 
     if (row_deviation > 0) {
-      solution += "d";
+      solution += "u";
       row_deviation--;
     } else if (row_deviation < 0) {
-      solution += "u";
+      solution += "d";
       row_deviation++;
     } else if (col_deviation > 0) {
       solution += "l";
@@ -81,7 +81,7 @@ function solvePuzzle(origin, end, path) {
       col_deviation++;
     } else {
       // If already at (0,0), we need to do a +1 move, then a -1 move.
-      solution += "u";
+      solution += "d";
       row_deviation++;
     }
   }
